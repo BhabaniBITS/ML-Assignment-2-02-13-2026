@@ -84,7 +84,7 @@ if uploaded_file is not None:
     st.write("### Confusion Matrix")
     cm = confusion_matrix(y_test, y_pred)
     fig, ax = plt.subplots()
-    sns.heatmap(cm, annot=True, fmt="d", cmap="Blues", ax=ax)
+    sns.heatmap(cm, annot=True, fmt="d", cmap="Blue", ax=ax)
     ax.set_xlabel("Predicted")
     ax.set_ylabel("Actual")
     st.pyplot(fig)
@@ -98,6 +98,6 @@ if uploaded_file is not None:
     report_df = pd.DataFrame(report).transpose()
 
     st.write("### 📊 Classification Report")
-    st.dataframe(report_df.style.background_gradient(cmap="Blues"))
+    st.dataframe(report_df.style.background_gradient(cmap="Blue"))
 
 
