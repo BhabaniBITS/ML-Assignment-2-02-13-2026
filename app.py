@@ -7,6 +7,7 @@ from sklearn.tree import DecisionTreeClassifier
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.naive_bayes import GaussianNB
 from sklearn.ensemble import RandomForestClassifier
+from sklearn.metrics import classification_report
 from xgboost import XGBClassifier
 from sklearn.metrics import (
     accuracy_score, roc_auc_score, precision_score,
@@ -89,5 +90,13 @@ if uploaded_file is not None:
     st.pyplot(fig)
 
     # --- Classification Report ---
-    st.write("### Classification Report")
-    st.text(classification_report(y_test, y_pred))
+   # st.write("### Classification Report")
+   # st.text(classification_report(y_test, y_pred))
+
+
+report = classification_report(y_test, y_pred, output_dict=True)
+report_df = pd.DataFrame(report).transpose()
+
+st.write("### 📊 Classification Report")
+st.dataframe(report_df.style.background_gradient(cmap="Blues"))
+
