@@ -18,7 +18,7 @@ import seaborn as sns
 
 # --- Streamlit UI ---
 st.title("Bank Marketing Classification App")
-st.write("Interactive ML demo with 6 models and evaluation metrics")
+st.write("Interactive ML demo with 6 models and evaluation metrics by Bhabani(2025aa05967)")
 
 # --- Dataset Upload ---
 uploaded_file = st.file_uploader("Upload CSV dataset", type=["csv"])
