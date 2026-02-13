@@ -17,6 +17,17 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 # --- Streamlit UI ---
+
+# Main Title (centered, dark blue)
+st.markdown("<h1 style='text-align: center; color: darkblue;'>📊 Bank Marketing Classification App</h1>", unsafe_allow_html=True)
+
+# Subtitle (green)
+st.markdown("<h3 style='text-align: center; color: green;'>Interactive ML demo with 6 models and evaluation metrics by <b>Bhabani (2025aa05967)</b></h3>", unsafe_allow_html=True)
+
+# Section Headings (purple)
+st.markdown("<h2 style='color: purple;'>🔍 Step 2: Model Evaluation</h2>", unsafe_allow_html=True)
+
+
 st.title("Bank Marketing Classification App")
 st.write("Interactive ML demo with 6 models and evaluation metrics by Bhabani(2025aa05967)")
 
