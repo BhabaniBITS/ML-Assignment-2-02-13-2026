@@ -98,6 +98,6 @@ if uploaded_file is not None:
     report_df = pd.DataFrame(report).transpose()
 
     st.write("### 📊 Classification Report")
-    st.dataframe(report_df.style.background_gradient(cmap="plasma"))
+    st.dataframe(report_df.style.background_gradient(cmap="Greens"))
 
 
