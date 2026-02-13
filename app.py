@@ -93,10 +93,3 @@ if uploaded_file is not None:
    st.write("### Classification Report")
    st.text(classification_report(y_test, y_pred))
 
-
-report = classification_report(y_test, y_pred, output_dict=True)
-report_df = pd.DataFrame(report).transpose()
-
-st.write("### 📊 Classification Report")
-st.dataframe(report_df.style.background_gradient(cmap="Blues"))
-
