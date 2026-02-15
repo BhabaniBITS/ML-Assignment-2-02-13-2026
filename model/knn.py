@@ -6,7 +6,7 @@ from sklearn.pipeline import Pipeline
 from sklearn.neighbors import KNeighborsClassifier
 
 def get_model():
-    data = pd.read_csv("bank-additional-full.csv", sep=';')
+    data = pd.read_csv("bank-additional-train.csv", sep=';')
 
     X, y = data.drop('y', axis=1), data['y'].map({'yes':1, 'no':0})
 

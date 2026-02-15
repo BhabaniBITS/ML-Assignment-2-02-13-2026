@@ -7,7 +7,7 @@ from sklearn.naive_bayes import GaussianNB
 
 def get_model():
     
-    data = pd.read_csv("bank-additional-full.csv", sep=';')
+    data = pd.read_csv("bank-additional-train.csv", sep=';')
     X, y = data.drop('y', axis=1), data['y'].map({'yes':1, 'no':0})
 
     categorical_cols = X.select_dtypes(include=['object']).columns
