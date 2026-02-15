@@ -48,7 +48,7 @@ if uploaded_file is not None:
     elif model_choice == "Random Forest":
         clf = random_forest.get_model()
     elif model_choice == "XGBoost":
-        clf = xgboost_model.get_model()
+        clf = xgboost.get_model()
 
     # Predictions
     y_pred = clf.predict(X_test)
