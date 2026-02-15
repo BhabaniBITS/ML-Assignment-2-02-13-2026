@@ -1,15 +1,6 @@
 import pandas as pd
 
-# Load the full dataset (already in your project root)
-data = pd.read_csv("bank-additional-full.csv", sep=';')
-# Cut out the first 3000 rows
-test_data = data.iloc[:3000]   # these will go into the test file
-train_data = data.iloc[3000:]  # remaining rows stay for training
-# Save the 3000 records as a test file
-test_data.to_csv("test_bank.csv", sep=';', index=False)
 
-# (Optional) Save the reduced training file if you want
-train_data.to_csv("bank-additional-full.csv", sep=';', index=False)
 
 
 import pandas as pd
