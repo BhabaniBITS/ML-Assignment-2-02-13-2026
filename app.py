@@ -25,7 +25,7 @@ model_choice = st.sidebar.selectbox(
 uploaded_file = st.sidebar.file_uploader("Upload Test CSV", type=["csv"])
 
 if uploaded_file is not None:
-    test_data = pd.read_csv(uploaded_file, sep=';')
+    test_data = pd.read_csv(uploaded_file, sep=None, engine="python")
     st.write("### Uploaded Test Data Preview")
     st.dataframe(test_data.head())
 
