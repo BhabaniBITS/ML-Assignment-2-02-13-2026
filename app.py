@@ -65,6 +65,7 @@ if uploaded_file is not None:
         st.write(f"**AUC:** {roc_auc_score(y_test, y_proba):.4f}")
 
     # Confusion Matrix
+    st.write("### Confusion Matrix")
     cm = confusion_matrix(y_test, y_pred)
     fig, ax = plt.subplots()
     sns.heatmap(cm, annot=True, fmt="d", cmap="Blues",
