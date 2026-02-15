@@ -7,8 +7,7 @@ from sklearn.pipeline import Pipeline
 from sklearn.linear_model import LogisticRegression
 
 def get_model():
-    url = "https://archive.ics.uci.edu/ml/machine-learning-databases/00222/bank-additional-full.csv"
-    data = pd.read_csv(url, sep=';')
+    data = pd.read_csv("bank-additional-full.csv", sep=';')
     X, y = data.drop('y', axis=1), data['y'].map({'yes':1, 'no':0})
 
     categorical_cols = X.select_dtypes(include=['object']).columns
