@@ -8,7 +8,8 @@ from sklearn.metrics import (
 )
 
 # Import training functions from model scripts
-from model import logistic_regression, decision_tree, knn, naive_bayes, random_forest, xgboost_model
+from model import logistic_regression, knn, naive_bayes, random_forest, xgboost
+from model import decision_tree
 
 # Title
 st.title("📊 Bank Marketing Classification App")
